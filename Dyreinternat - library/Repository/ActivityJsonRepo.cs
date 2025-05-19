@@ -8,26 +8,26 @@ using System.Threading.Tasks;
 using dyreinternat___library.Models;
 using dyreinternat___library.Repository;
 
-namespace Dyreinternat___library.Repository
+namespace dyreinternat___library.Repository
 {
-    public class EventJsonRepo : EventCollectionRepo
+    public class ActivityJsonRepo : ActivityCollectionRepo
     {
-        public EventJsonRepo()
+        public ActivityJsonRepo()
         {
             LoadFile();
         }
 
         private void LoadFile()
         {
-            string path = "Event.Json";
+            string path = "Activity.Json";
             string json = File.ReadAllText(path);
-            _events = JsonSerializer.Deserialize<List<Event>>(json);
+            _activity = JsonSerializer.Deserialize<List<dyreinternat___library.Models.Activity>>(json);
         }
 
-        public override void Add(Event events)
+        public override void Add(dyreinternat___library.Models.Activity activity)
         {
             Debug.WriteLine("gemmer fil");
-            base.Add(events);
+            base.Add(activity);
             SaveFile();
 
         }
@@ -35,8 +35,8 @@ namespace Dyreinternat___library.Repository
         private void SaveFile()
         {
             Debug.WriteLine("gemmer fil");
-            string path = "Event.Json";
-            File.WriteAllText(path, JsonSerializer.Serialize(_events));
+            string path = "Activity.Json";
+            File.WriteAllText(path, JsonSerializer.Serialize(_activity));
         }
     }
 }

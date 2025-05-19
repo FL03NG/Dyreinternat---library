@@ -16,5 +16,9 @@
             EndTime = endTime;
             User = user;
         }
+        public Booking()
+        {
+
+        }
     }
 }

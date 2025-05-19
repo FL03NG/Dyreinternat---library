@@ -1,18 +1,22 @@
 ﻿namespace dyreinternat___library.Models
 {
-    public class Event
+    public class Activity
     {
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
 
-        public Event(string name, string description, DateTime startTime, DateTime endTime)
+        public Activity(string name, string description, DateTime startTime, DateTime endTime)
         {
             Name = name;
             Description = description;
             StartTime = startTime;
             EndTime = endTime;
+        }
+        public Activity()
+        {
+
         }
     }
 }

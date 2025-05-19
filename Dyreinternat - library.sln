@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dyreinternat - library", "Dyreinternat - library\Dyreinternat - library.csproj", "{32C6345C-66D8-4313-A3A0-D8E4F8E509FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dyreinternat - library", "Dyreinternat - library\dyreinternat - library.csproj", "{32C6345C-66D8-4313-A3A0-D8E4F8E509FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91F59A6A-BB67-4878-BC7F-7716B4688E5D}
 	EndGlobalSection
 EndGlobal
