@@ -22,5 +22,13 @@ namespace dyreinternat___library.Repository
         {
             return _bookings;
         }
+        public void Delete(int animalID)
+        {
+            var bookingToRemove = _bookings.FirstOrDefault(b => b.AnimalID == animalID);
+            if (bookingToRemove != null)
+            {
+                _bookings.Remove(bookingToRemove);
+            }
+        }
     }
 }

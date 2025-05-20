@@ -24,7 +24,11 @@ namespace dyreinternat___library.Services
             return _bookingRepo.GetAll();
         }
 
-        
+        public void Delete(int animalID)
+        {
+            _bookingRepo.Delete(animalID);
+        }
+
     }
 }
 

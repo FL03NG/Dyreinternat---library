@@ -11,6 +11,7 @@ namespace dyreinternat___library.Repository
 
         
 
-
+       
+        public void Delete(int animalID);
     }
 }
