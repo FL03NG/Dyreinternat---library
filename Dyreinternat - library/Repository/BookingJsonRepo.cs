@@ -23,7 +23,7 @@ namespace dyreinternat___library.Repository
             _bookings = JsonSerializer.Deserialize<List<Booking>>(json);
         }
 
-        public override void Add(Booking booking)
+        public override void Add(dyreinternat___library.Models.Booking booking)
         {
             Debug.WriteLine("gemmer booking fil");
             base.Add(booking);

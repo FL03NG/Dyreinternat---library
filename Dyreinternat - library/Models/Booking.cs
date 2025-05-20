@@ -7,14 +7,16 @@
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
         public string User {  get; set; }
+        public string Description { get; set; }
 
-        public Booking(int animalID, string name, DateTime startTime, DateTime endTime, string user)
+        public Booking(int animalID, string name, DateTime startTime, DateTime endTime, string user, string description)
         {
             AnimalID = animalID;
             Name = name;
             StartTime = startTime;
             EndTime = endTime;
             User = user;
+            Description = description;
         }
         public Booking()
         {
