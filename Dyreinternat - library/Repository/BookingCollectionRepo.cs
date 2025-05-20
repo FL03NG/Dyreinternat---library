@@ -24,7 +24,7 @@ namespace dyreinternat___library.Repository
         }
         public void Delete(int animalID)
         {
-            var bookingToRemove = _bookings.FirstOrDefault(b => b.AnimalID == animalID);
+            Booking bookingToRemove = _bookings.FirstOrDefault((Booking b) => b.AnimalID == animalID);
             if (bookingToRemove != null)
             {
                 _bookings.Remove(bookingToRemove);
