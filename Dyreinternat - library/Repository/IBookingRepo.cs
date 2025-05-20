@@ -9,7 +9,7 @@ namespace dyreinternat___library.Repository
 
         public void Add(Booking booking);
 
-        public void Delete(int id);
+        
 
 
     }

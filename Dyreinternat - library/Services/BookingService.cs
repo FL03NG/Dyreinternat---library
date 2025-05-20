@@ -7,27 +7,24 @@ namespace dyreinternat___library.Services
 
 
     {
-        private IBookingRepo _bookingrepo;
+        private IBookingRepo _bookingRepo;
 
         public BookingService(IBookingRepo bookingrepoRepo)
         {
-            _bookingrepo = bookingrepoRepo;
+            _bookingRepo = bookingrepoRepo;
         }
 
         public void Add(Booking booking)
         {
-            _bookingrepo.Add(booking);
+            _bookingRepo.Add(booking);
         }
 
         public List<Booking> GetAll()
         {
-            return _bookingrepo.GetAll();
+            return _bookingRepo.GetAll();
         }
 
-        public void Delete(int id)
-        {
-            _bookingrepo.Delete(id);
-        }
+        
     }
 }
 

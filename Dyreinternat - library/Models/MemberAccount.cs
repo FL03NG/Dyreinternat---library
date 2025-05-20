@@ -8,5 +8,10 @@
         {
             _memberLogIn = MemberLogIn;
         }
+
+        //public MemberAccount()
+        //{
+
+        //}
     }
 }

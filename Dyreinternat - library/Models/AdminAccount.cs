@@ -10,5 +10,10 @@ namespace dyreinternat___library.Models
         {
             AdminLogIn = adminLogIn;
         }
+
+        //public AdminAccount()
+        //{
+
+        //}
     }
 }
