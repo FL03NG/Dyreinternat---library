@@ -38,5 +38,11 @@ namespace dyreinternat___library.Repository
             string path = "Activity.Json";
             File.WriteAllText(path, JsonSerializer.Serialize(_activity));
         }
+        public override void Update(Models.Activity updatedActivity)
+        {
+            base.Update(updatedActivity);
+            SaveFile();
+        }
+
     }
 }

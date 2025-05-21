@@ -5,26 +5,19 @@ namespace dyreinternat___library.Services
 {
     public class MemberService
     {
-        private IMemberRepo _memberrepo;
+        private IMemberRepo _accountRepo;
 
-        public MemberService(IMemberRepo memberrepo)
+        public MemberService(IMemberRepo accountRepo)
         {
-            _memberrepo = memberrepo;
+            _accountRepo = accountRepo;
         }
-
-        public void Add(MemberAccount memberAccount )
+        public void Add(Account accountRepo)
         {
-            _memberrepo.Add(memberAccount);
+            _accountRepo.Add(accountRepo);
         }
-
-        public List<MemberAccount> GetAll()
+        public List<Account> GetAll()
         {
-            return _memberrepo.GetAll();
-        }
-
-        public void delete(int id)
-        {
-            _memberrepo.Delete(id);
+            return _accountRepo.GetAll();
         }
 
 

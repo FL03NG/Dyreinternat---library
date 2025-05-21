@@ -21,5 +21,13 @@ namespace dyreinternat___library.Services
         {
             return _activityrepo.GetAll();
         }
+        public Activity Get(int id)
+        {
+            return _activityrepo.Get(id);
+        }
+        public void Update(Activity activity)
+        {
+            _activityrepo.Update(activity);
+        }
     }
 }

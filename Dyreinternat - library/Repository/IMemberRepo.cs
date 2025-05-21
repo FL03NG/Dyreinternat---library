@@ -4,10 +4,8 @@ namespace dyreinternat___library.Repository
 {
     public interface IMemberRepo
     {
-        public List<MemberAccount> GetAll();
+        public List<Account> GetAll();
 
-        public void Add(MemberAccount memberAccount);
-
-        public void Delete(int id);
+        public void Add(Account account);
     }
 }

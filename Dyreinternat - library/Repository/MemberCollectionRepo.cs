@@ -1,51 +1,27 @@
-﻿using dyreinternat___library.Models;
+﻿using System.Diagnostics;
+using dyreinternat___library.Models;
 
 namespace dyreinternat___library.Repository
 {
     public class MemberCollectionRepo : IMemberRepo
     {
-
-        private List<MemberAccount> _members;
+        public List<Account> _account;
 
         public MemberCollectionRepo()
         {
-            _members = new List<MemberAccount>();
-            Seed();
+            _account = new List<Account>();
+
         }
 
-        public void Add(MemberAccount memberAccount)
+        public virtual void Add(Account account)
         {
-            _members.Add(memberAccount);
+            Debug.WriteLine("add account");
+            _account.Add(account);
         }
 
-        public void Delete(int id)
+        public List<Account> GetAll()
         {
-            foreach (MemberAccount a in _members)
-            {
-                if (a.AccountID == id)
-                {
-                    _members.Remove(a);
-                    break;
-                }
-            }
-        }
-
-        public List<MemberAccount> GetAll()
-        {
-            return _members;
-        }
-
-        private void Seed()
-        {
-            _members.Add(new MemberAccount(1, "", "", "", ""));
-            _members.Add(new MemberAccount(2, "", "", "", ""));
-            _members.Add(new MemberAccount(3, "", "", "", ""));
-            _members.Add(new MemberAccount(4, "", "", "", ""));
-            _members.Add(new MemberAccount(5, "", "", "", ""));
-            _members.Add(new MemberAccount(6, "", "", "", ""));
-            _members.Add(new MemberAccount(7, "", "", "", ""));
-            _members.Add(new MemberAccount(8, "", "", "", ""));
-
+            return _account;
         }
     }
 }

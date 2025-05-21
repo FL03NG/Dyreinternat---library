@@ -14,7 +14,7 @@
             Email = email;
             Tlf = tlf;
         }
-    //public Account() { }
+    public Account() { }
 
     }
 
