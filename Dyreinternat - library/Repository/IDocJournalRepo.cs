@@ -7,7 +7,7 @@ using dyreinternat___library.Models;
 
 namespace dyreinternat___library.Repository
 {
-    internal interface IDocJournal
+    public interface IDocJournalRepo
     {
         public List<DocJournal> GetAll();
 

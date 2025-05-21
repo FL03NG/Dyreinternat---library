@@ -8,11 +8,11 @@ using dyreinternat___library.Repository;
 
 namespace dyreinternat___library.Services
 {
-    internal class DocJournalService
+    public class DocJournalService
     {
-        private IDocJournal _docJournalRepo;
+        private IDocJournalRepo _docJournalRepo;
 
-        public DocJournalService(IDocJournal docJournalRepo)
+        public DocJournalService(IDocJournalRepo docJournalRepo)
         {
             _docJournalRepo = docJournalRepo; 
         }

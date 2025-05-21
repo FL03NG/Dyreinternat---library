@@ -9,7 +9,7 @@ using dyreinternat___library.Models;
 
 namespace dyreinternat___library.Repository
 {
-    internal class DocJournalCollectionRepo : IDocJournal
+    public class DocJournalCollectionRepo : IDocJournalRepo
     {
         public List<DocJournal> _docJournal;
 

@@ -9,9 +9,9 @@ using dyreinternat___library.Models;
 
 namespace dyreinternat___library.Repository
 {
-    internal class DocJournalJasonRepo : DocJournalCollectionRepo
+    public class DocJournalJsonRepo : DocJournalCollectionRepo
     {
-        public DocJournalJasonRepo()
+        public DocJournalJsonRepo()
         {
             LoadFile();
         }

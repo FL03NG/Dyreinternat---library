@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace dyreinternat___library.Models
 {
-    internal class DocJournal
+    public class DocJournal
     {
         public int Id { get; set; }
         public string Name { get; set; }
