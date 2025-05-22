@@ -24,7 +24,10 @@ namespace dyreinternat___library.Services
         {
             return _docJournalRepo.GetAll();
         }
-
+        public void Delete(int animalID)
+        {
+            _docJournalRepo.Delete(animalID);
+        }
 
     }
 }

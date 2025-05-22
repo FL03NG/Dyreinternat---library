@@ -13,7 +13,7 @@ namespace dyreinternat___library.Repository
 
         public void Add(DocJournal docJournal);
 
-       
+        public void Delete(int id);
 
 
 

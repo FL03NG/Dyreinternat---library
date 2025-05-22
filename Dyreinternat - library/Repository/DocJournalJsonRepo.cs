@@ -17,7 +17,7 @@ namespace dyreinternat___library.Repository
         }
         private void LoadFile()
         {
-            string path = "docJournal.Json";
+            string path = "DocJournal.Json";
             string json = File.ReadAllText(path);
             _docJournal = JsonSerializer.Deserialize<List<DocJournal>>(json);
         }

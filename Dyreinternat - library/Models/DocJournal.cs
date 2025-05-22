@@ -8,14 +8,14 @@ namespace dyreinternat___library.Models
 {
     public class DocJournal
     {
-        public int Id { get; set; }
+        public int DocJournalID { get; set; }
         public string Name { get; set; }
         public string Species { get; set; }
         public string Treatment { get; set; }
 
-        public DocJournal (int id, string name, string species, string treatment)
+        public DocJournal (int docjournalid, string name, string species, string treatment)
         {
-            Id = id;
+            DocJournalID = DocJournalID;
             Name = name;
             Species = species;
             Treatment = treatment;

@@ -29,7 +29,25 @@ namespace dyreinternat___library.Repository
         {
             return _docJournal;
         }
+        public void Delete(int id)
+        {
+            DocJournal DocLogToRemove = null;
 
-        
+            foreach (DocJournal d in _docJournal)
+            {
+                if (d.DocJournalID == id)
+                {
+                    DocLogToRemove = d;
+                    break;
+                }
+            }
+
+            if (DocLogToRemove != null)
+            {
+                _docJournal.Remove(DocLogToRemove);
+            }
+        }
+
+
     }
 }
