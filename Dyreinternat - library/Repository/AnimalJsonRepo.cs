@@ -33,6 +33,16 @@ namespace dyreinternat___library.Repository
             string path = "Animal.Json";
             File.WriteAllText(path, JsonSerializer.Serialize(_animals));
         }
-        
+
+        public override void Delete(int id)
+        {
+            Animal animalToRemove = _animals.FirstOrDefault(b => b.AnimalID == id);
+            if (animalToRemove != null)
+            {
+                _animals.Remove(animalToRemove);
+                SaveFile();
+            }
+        }
+
     }
 }

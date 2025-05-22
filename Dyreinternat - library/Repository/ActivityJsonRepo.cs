@@ -38,6 +38,16 @@ namespace dyreinternat___library.Repository
             string path = "Activity.Json";
             File.WriteAllText(path, JsonSerializer.Serialize(_activity));
         }
+
+        public override void Delete(int id)
+        {
+            Models.Activity activityToRemove = _activity.FirstOrDefault(b => b.ID == id);
+            if (activityToRemove != null)
+            {
+                _activity.Remove(activityToRemove);
+                SaveFile();
+            }
+        }
         public override void Update(Models.Activity updatedActivity)
         {
             base.Update(updatedActivity);

@@ -29,5 +29,9 @@ namespace dyreinternat___library.Services
         {
             _activityrepo.Update(activity);
         }
+        public void Delete(int id)
+        {
+            _activityrepo.Delete(id);
+        }
     }
 }

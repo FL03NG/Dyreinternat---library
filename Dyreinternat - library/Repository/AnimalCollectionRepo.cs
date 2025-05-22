@@ -1,5 +1,6 @@
 ﻿
 using System.Diagnostics;
+using System.Reflection.Metadata;
 using dyreinternat___library.Models;
 
 namespace dyreinternat___library.Repository
@@ -20,15 +21,12 @@ namespace dyreinternat___library.Repository
             _animals.Add(animal);
         }
 
-        public void Delete(int id)
+        public virtual void Delete(int id)
         {
-            foreach (Animal a in _animals)
+            Animal animalToRemove = _animals.FirstOrDefault((Animal b) => b.AnimalID == id);
+            if (animalToRemove != null)
             {
-                if (a.AnimalID == id)
-                {
-                    _animals.Remove(a);
-                    break;
-                }
+                _animals.Remove(animalToRemove);
             }
         }
 

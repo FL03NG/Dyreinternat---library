@@ -34,6 +34,14 @@ namespace dyreinternat___library.Repository
             }
             return null;
         }
+        public virtual void Delete(int id)
+        {
+            Models.Activity activityToRemove = _activity.FirstOrDefault((Models.Activity b) => b.ID == id);
+            if (activityToRemove != null)
+            {
+                _activity.Remove(activityToRemove);
+            }
+        }
         public virtual void Update(Models.Activity updatedActivity)
         {
             for (int i = 0; i < _activity.Count; i++)
