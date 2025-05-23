@@ -19,6 +19,10 @@ namespace dyreinternat___library.Services
         {
             return _accountRepo.GetAll();
         }
+        public void Delete(int accountID)
+        {
+            _accountRepo.Delete(accountID);
+        }
 
 
 

@@ -23,5 +23,24 @@ namespace dyreinternat___library.Repository
         {
             return _account;
         }
+
+        public void Delete(int id)
+        {
+            Account accountToRemove = null;
+
+            foreach (Account d in _account)
+            {
+                if (d.AccountID == id)
+                {
+                    accountToRemove = d;
+                    break;
+                }
+            }
+
+            if (accountToRemove != null)
+            {
+                _account.Remove(accountToRemove);
+            }
+        }
     }
 }

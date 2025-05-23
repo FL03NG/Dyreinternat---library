@@ -7,5 +7,6 @@ namespace dyreinternat___library.Repository
         public List<Account> GetAll();
 
         public void Add(Account account);
+        public void Delete(int id);
     }
 }

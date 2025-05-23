@@ -12,16 +12,20 @@ namespace dyreinternat___library.Services
             _animalrepo = animalRepo;
         }
 
+        // Tilføjer et nyt dyr via repository-laget
         public void Add(Animal animal)
         {
             _animalrepo.Add(animal);
         }
 
+
+        // Henter alle dyr fra repository-laget
         public List<Animal> GetAll()
         {
             return _animalrepo.GetAll();
         }
 
+        // Sletter et dyr ud fra dets ID
         public void Delete(int id)
         {
             _animalrepo.Delete(id);
