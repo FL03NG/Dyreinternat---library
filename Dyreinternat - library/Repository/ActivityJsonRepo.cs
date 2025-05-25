@@ -26,10 +26,17 @@ namespace dyreinternat___library.Repository
 
         public override void Add(dyreinternat___library.Models.Activity activity)
         {
-            Debug.WriteLine("gemmer fil");
-            base.Add(activity);
-            SaveFile();
+            // Find højeste eksisterende ID og læg 1 til
+            int nextId = 1;
+            if (_activity.Count > 0)
+            {
+                nextId = _activity.Max(a => a.ID) + 1;
+            }
 
+            activity.ID = nextId; // Tildel det nye unikke ID
+
+            base.Add(activity);   // Tilføj til listen
+            SaveFile();           // Gem til JSON
         }
 
         private void SaveFile()
