@@ -40,6 +40,7 @@ namespace dyreinternat___library.Repository
         public override void Delete(int id)
         {
             base.Delete(id);
+            SaveFile();
         }
     }
 }

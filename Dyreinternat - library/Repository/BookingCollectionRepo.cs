@@ -22,7 +22,7 @@ namespace dyreinternat___library.Repository
         {
             return _bookings;
         }
-        public void Delete(int animalID) //fjerner en booking fra listen baseret på animalID
+        public virtual void Delete(int animalID) //fjerner en booking fra listen baseret på animalID
         {
             Booking bookingToRemove = null; // initialiserer "bookingToRemove" som "null"
 

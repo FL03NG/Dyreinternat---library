@@ -31,14 +31,14 @@ namespace dyreinternat___library.Repository
             {
                 if (d.BlogID == id) //tjekker om det valgte id matcher med det i parametren
                 {
-                    blogToRemove = d; //hvis det gør 
-                    break; //stopper den med at løbe igennem
+                    blogToRemove = d; //hvis det gør, 
+                    break; //stopper den med at løbe igennem.
                 }
             }
 
-            if (blogToRemove != null) //hvis en matching blog blev fundet
+            if (blogToRemove != null) //hvis en matching blog blev fundet,
             {
-                _blog.Remove(blogToRemove); //bliver den slettet fra listen
+                _blog.Remove(blogToRemove); //bliver den slettet fra listen.
             }
         }
     }

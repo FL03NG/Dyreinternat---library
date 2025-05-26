@@ -24,7 +24,7 @@ namespace dyreinternat___library.Repository
             return _account;
         }
 
-        public void Delete(int id) //fjerner et medlem fra listen baseret på id
+        public virtual void Delete(int id) //fjerner et medlem fra listen baseret på id
         {
             Account accountToRemove = null; // initialiserer "accountToRemove" som "null"
 

@@ -29,7 +29,7 @@ namespace dyreinternat___library.Repository
         {
             return _docJournal;
         }
-        public void Delete(int id) //fjerner en DocJournal fra listen baseret på id
+        public virtual void Delete(int id) //fjerner en DocJournal fra listen baseret på id
         {
             DocJournal DocLogToRemove = null; // initialiserer "DocLogToRemove" som "null"
 

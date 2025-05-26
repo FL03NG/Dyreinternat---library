@@ -18,7 +18,7 @@ namespace dyreinternat___library.Repository
         public virtual void Add(Animal animal) //virtuel tiladder denne metode at blive "overriden" i en subklasse
         {
             Debug.WriteLine("add2"); 
-            _animals.Add(animal); //tilføjer et "Animals" objekt til "_activity" listen
+            _animals.Add(animal); //tilføjer et "Animals" objekt til "_animals" listen
         }
 
         public virtual void Delete(int id) //fjerner et dyr fra listen baseret på id

@@ -36,6 +36,11 @@ namespace dyreinternat___library.Repository
             string path = "Member.Json";
             File.WriteAllText(path, JsonSerializer.Serialize(_account));
         }
+        public override void Delete(int id)
+        {
+            base.Delete(id);
+            SaveFile();
+        }
 
 
 
