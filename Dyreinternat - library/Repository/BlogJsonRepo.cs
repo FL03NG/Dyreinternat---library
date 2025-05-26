@@ -23,7 +23,7 @@ namespace dyreinternat___library.Repository
             _blog = JsonSerializer.Deserialize<List<Blog>>(json);
         }
 
-        public override void Add(dyreinternat___library.Models.Blog blog)
+        public override void Add(Blog blog)
         {
             Debug.WriteLine("gemmer blog fil");
             base.Add(blog);
@@ -36,6 +36,10 @@ namespace dyreinternat___library.Repository
             Debug.WriteLine("gemmer blog fil");
             string path = "Blog.Json";
             File.WriteAllText(path, JsonSerializer.Serialize(_blog));
+        }
+        public override void Delete(int id)
+        {
+            base.Delete(id);
         }
     }
 }

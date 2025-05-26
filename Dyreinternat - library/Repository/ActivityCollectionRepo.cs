@@ -34,7 +34,7 @@ namespace dyreinternat___library.Repository
             }
             return null;
         }
-        public void Delete(int id) //fjerner en aktivitet fra listen baseret på id
+        public virtual void Delete(int id) //fjerner en aktivitet fra listen baseret på id
         {
             Models.Activity activityToRemove = null; // initialiserer "activityToRemove" som "null"
 

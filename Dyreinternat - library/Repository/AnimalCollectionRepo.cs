@@ -21,7 +21,7 @@ namespace dyreinternat___library.Repository
             _animals.Add(animal); //tilføjer et "Animals" objekt til "_activity" listen
         }
 
-        public void Delete(int id) //fjerner et dyr fra listen baseret på id
+        public virtual void Delete(int id) //fjerner et dyr fra listen baseret på id
         {
             Animal animalToRemove = null; // initialiserer "animalToRemove" som "null"
 

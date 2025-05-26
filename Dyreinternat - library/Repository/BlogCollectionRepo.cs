@@ -23,7 +23,7 @@ namespace dyreinternat___library.Repository
         {
             return _blog;
         }
-        public void Delete(int id) //fjerner en blog fra listen baseret på id
+        public virtual void Delete(int id) //fjerner en blog fra listen baseret på id
         {
             Blog blogToRemove = null; // initialiserer "blogToRemove" som "null"
 

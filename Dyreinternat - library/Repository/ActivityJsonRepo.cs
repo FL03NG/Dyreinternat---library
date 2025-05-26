@@ -44,13 +44,19 @@ namespace dyreinternat___library.Repository
             Debug.WriteLine("gemmer fil");
             string path = "Activity.Json";
             File.WriteAllText(path, JsonSerializer.Serialize(_activity));
+            
         }
 
         
-        public override void Update(Models.Activity updatedActivity)
+        public override void Update(Models.Activity updatedActivity) //tilmeld
         {
             base.Update(updatedActivity);
             SaveFile();
+        }
+        public override void Delete(int id)
+        {
+            base.Delete(id);
+          
         }
 
     }

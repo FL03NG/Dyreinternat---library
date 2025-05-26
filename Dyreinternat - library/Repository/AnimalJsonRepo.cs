@@ -34,7 +34,12 @@ namespace dyreinternat___library.Repository
             File.WriteAllText(path, JsonSerializer.Serialize(_animals));
         }
 
-        
+        public override void Delete(int id)
+        {
+            base.Delete(id); 
+        }
+
+
 
     }
 }
