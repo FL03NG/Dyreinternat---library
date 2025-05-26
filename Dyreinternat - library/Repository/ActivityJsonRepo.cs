@@ -10,7 +10,7 @@ using dyreinternat___library.Repository;
 
 namespace dyreinternat___library.Repository
 {
-    public class ActivityJsonRepo : ActivityCollectionRepo
+    public class ActivityJsonRepo : ActivityCollectionRepo //den arver fra "ActivityCollectionRepo"
     {
         public ActivityJsonRepo()
         {
@@ -39,15 +39,7 @@ namespace dyreinternat___library.Repository
             File.WriteAllText(path, JsonSerializer.Serialize(_activity));
         }
 
-        public override void Delete(int id)
-        {
-            Models.Activity activityToRemove = _activity.FirstOrDefault(b => b.ID == id);
-            if (activityToRemove != null)
-            {
-                _activity.Remove(activityToRemove);
-                SaveFile();
-            }
-        }
+        
         public override void Update(Models.Activity updatedActivity)
         {
             base.Update(updatedActivity);
