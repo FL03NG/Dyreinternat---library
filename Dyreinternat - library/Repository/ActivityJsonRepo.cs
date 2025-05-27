@@ -10,13 +10,15 @@ using dyreinternat___library.Repository;
 
 namespace dyreinternat___library.Repository
 {
-    public class ActivityJsonRepo : ActivityCollectionRepo //den arver fra "ActivityCollectionRepo"
+    public class ActivityJsonRepo : ActivityCollectionRepo // Den arver fra "ActivityCollectionRepo"
     {
+        // Constructor der automatisk loader data fra JSON-filen ved oprettelse
         public ActivityJsonRepo()
         {
             LoadFile();
         }
 
+        // Indlæser aktivitetslisten fra JSON-filen og deserialiserer til _activity
         private void LoadFile()
         {
             string path = "Activity.Json";
@@ -24,41 +26,35 @@ namespace dyreinternat___library.Repository
             _activity = JsonSerializer.Deserialize<List<dyreinternat___library.Models.Activity>>(json);
         }
 
-        public override void Add(dyreinternat___library.Models.Activity activity)
+        // Overskriver Add-metoden og tilføjer en aktivitet samt gemmer den til JSON
+        public override void Add(Models.Activity activity)
         {
-            // Find højeste eksisterende ID og læg 1 til
-            int nextId = 1;
-            if (_activity.Count > 0)
-            {
-                nextId = _activity.Max(a => a.ID) + 1;
-            }
-
-            activity.ID = nextId; // Tildel det nye unikke ID
-
-            base.Add(activity);   // Tilføj til listen
-            SaveFile();           // Gem til JSON
+            Debug.WriteLine("gemmer fil");
+            base.Add(activity);
+            SaveFile();
         }
 
+        // Gemmer den aktuelle _activity-liste til JSON-filen
         private void SaveFile()
         {
             Debug.WriteLine("gemmer fil");
             string path = "Activity.Json";
             File.WriteAllText(path, JsonSerializer.Serialize(_activity));
-            
         }
 
-        
-        public override void Update(Models.Activity updatedActivity) //tilmeld
+        // Overskriver Update-metoden og gemmer derefter ændringerne til JSON
+        public override void Update(Models.Activity updatedActivity) // tilmeld
         {
             base.Update(updatedActivity);
             SaveFile();
         }
+
+        // Overskriver Delete-metoden og gemmer derefter ændringerne til JSON
         public override void Delete(int id)
         {
             base.Delete(id);
             SaveFile();
-
         }
-
     }
+
 }
